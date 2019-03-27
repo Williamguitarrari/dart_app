@@ -1,4 +1,4 @@
-![View this](src/assets/dart.png)
+(src/assets/dart.png)
 
 # To run:
 * > install npm
