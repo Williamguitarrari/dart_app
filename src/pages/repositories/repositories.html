@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Repositórios</ion-title>
+  </ion-navbar>
+
+  <ion-toolbar>
+      <ion-searchbar (ionInput)="filterRepositories($event)" placeholder="Digite o nome do repositório..."> </ion-searchbar>
+    </ion-toolbar>
+</ion-header>
+
+
+<ion-content padding>
+    <ion-list>
+        <ion-item *ngFor="let repository of repositories">
+          <h2>Nome: {{repository.name}}</h2>
+          <h2>Descrição: {{repository.description}}</h2>
+          <h3>URL: {{repository.url}}</h3>
+        </ion-item>
+      </ion-list>
+      <h5 *ngIf="errorMessage" class="error">{{ errorMessage }}</h5>
+</ion-content>
